@@ -1,5 +1,9 @@
 .Button {
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-family: inherit;
+	font-weight: bold;
 }
 
 .clear {
