@@ -19,6 +19,7 @@
 		"@babel/preset-env": "^7.23.3",
 		"@babel/preset-typescript": "^7.23.3",
 		"@svgr/webpack": "^8.1.0",
+		"@testing-library/react": "^14.1.2",
 		"@types/jest": "^29.5.8",
 		"@types/node": "^20.2.5",
 		"@types/react": "^18.2.12",
