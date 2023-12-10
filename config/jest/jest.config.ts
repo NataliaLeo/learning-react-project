@@ -4,6 +4,7 @@
  */
 
 import type { Config } from "jest";
+import path from "path";
 
 const config: Config = {
 	// All imported modules in your tests should be mocked automatically
@@ -48,8 +49,14 @@ const config: Config = {
 	// 	"<rootDir>**/__tests__/**/*.[jt]s?(x)",
 	// 	"<rootDir>**/?(*.)+(spec|test).[tj]s?(x)",
 	// ],
-	testMatch: ["<rootDir>/src/**/*.test.ts", "<rootDir>/src/**/*.test.tsx"],
-
+	testMatch: ["./src/**/*.test.ts", "<rootDir>/src/**/*.test.tsx"],
+	moduleNameMapper: {
+		// "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+		// 	"<rootDir>/__mocks__/fileMock.js",
+		"\\.s?css$": "identity-obj-proxy",
+		"\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+	},
+	setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
 	// Indicates whether the coverage information should be collected while executing the test
 	// collectCoverage: false,
 
