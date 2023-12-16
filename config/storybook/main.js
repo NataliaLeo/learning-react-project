@@ -1,7 +1,6 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
-// import "app/styles/index.scss";
+// import type { StorybookConfig } from "@storybook/react-webpack5";
 
-const config: StorybookConfig = {
+const config = {
 	stories: ["../../src/**/*.stories.@(js|jsx|ts|tsx)"],
 	addons: [
 		"@storybook/addon-links",
@@ -10,14 +9,7 @@ const config: StorybookConfig = {
 		"@storybook/addon-interactions",
 		"@storybook/addon-styling-webpack",
 	],
-	framework: {
-		name: "@storybook/react-webpack5",
-		options: {
-			builder: {
-				useSWC: true,
-			},
-		},
-	},
+	framework: "@storybook/react-webpack5",
 	docs: {
 		autodocs: "tag",
 	},
