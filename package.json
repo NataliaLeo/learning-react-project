@@ -34,6 +34,7 @@
 		"@storybook/react": "^7.6.5",
 		"@storybook/react-webpack5": "^7.6.5",
 		"@storybook/test": "^7.6.5",
+		"@stylistic/eslint-plugin-js": "^1.5.1",
 		"@svgr/webpack": "^8.1.0",
 		"@testing-library/jest-dom": "^6.1.5",
 		"@testing-library/react": "^14.1.2",
