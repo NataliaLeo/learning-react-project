@@ -12,13 +12,13 @@
 	border-radius: 50%;
 	-webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+	// animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
 .lds-ripple div:nth-child(2) {
 	-webkit-animation-delay: -0.5s;
 	animation-delay: -0.5s;
-	animation-delay: -0.5s;
+	// animation-delay: -0.5s;
 }
 
 @-webkit-keyframes lds-ripple {
