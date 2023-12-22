@@ -44,6 +44,6 @@ module.exports = {
 		"import/extensions": "off",
 		"import/no-extraneous-dependencies": "off",
 		"@typescript-eslint/no-explicit-any": "warn",
-		"linebreak-style": ["warn", "windows"],
+		"linebreak-style": 0,
 	},
 };
