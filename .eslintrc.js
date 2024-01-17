@@ -31,7 +31,7 @@ module.exports = {
 		quotes: [2, "double"],
 		semi: [2, "always"],
 		"react/jsx-indent": [2, "tab"],
-		"linebreak-style": ["error", "windows"],
+		// "linebreak-style": ["error", "windows"],
 		"react/jsx-filename-extension": [
 			2,
 			{ extensions: [".js", ".jsx", ".tsx"] },
@@ -45,5 +45,6 @@ module.exports = {
 		"import/no-extraneous-dependencies": "off",
 		"@typescript-eslint/no-explicit-any": "warn",
 		"linebreak-style": 0,
+		"scss/double-slash-comment-whitespace-inside": 0,
 	},
 };
