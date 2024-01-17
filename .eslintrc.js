@@ -45,6 +45,5 @@ module.exports = {
 		"import/no-extraneous-dependencies": "off",
 		"@typescript-eslint/no-explicit-any": "warn",
 		"linebreak-style": 0,
-		"scss/double-slash-comment-whitespace-inside": 0,
 	},
 };
