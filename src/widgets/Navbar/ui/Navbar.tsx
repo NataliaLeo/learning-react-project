@@ -9,14 +9,7 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
 	return (
 		<div className={classNames(cls.navbar, {}, [className])}>
-			<div className={cls.links}>
-				<AppLink to={"/"} theme={AppLinkTheme.PRIMARY} className={cls.mainLink}>
-					Главная
-				</AppLink>
-				<AppLink to={"/about"} theme={AppLinkTheme.PRIMARY}>
-					О сайте
-				</AppLink>
-			</div>
+			<div className={cls.links}></div>
 		</div>
 	);
 };
