@@ -25,7 +25,7 @@ module.exports = {
 		sourceType: "module",
 		project: true,
 	},
-	plugins: ["@typescript-eslint", "react"],
+	plugins: ["@typescript-eslint", "react", "i18next", "react-hooks"],
 	rules: {
 		indent: [2, "tab"],
 		quotes: [2, "double"],
@@ -45,5 +45,7 @@ module.exports = {
 		"import/no-extraneous-dependencies": "off",
 		"@typescript-eslint/no-explicit-any": "warn",
 		"linebreak-style": 0,
+		"react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+		"react-hooks/exhaustive-deps": "error", // Checks effect dependencies
 	},
 };
