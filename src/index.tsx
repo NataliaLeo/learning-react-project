@@ -1,16 +1,16 @@
-import App from "./app/App";
-import "app/styles/index.scss";
-import { BrowserRouter } from "react-router-dom";
-import ThemeProvider from "./app/providers/ThemeProvider/ui/ThemeProvider";
-
-import "shared/config/i18n/i18n";
-import { ErrorBoundary } from "app/providers/ErrorBoundary";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import App from "./app/App";
+import "app/styles/index.scss";
+import "shared/config/i18n/i18n";
+import ThemeProvider from "./app/providers/ThemeProvider/ui/ThemeProvider";
+import { BrowserRouter } from "react-router-dom";
+import { ErrorBoundary } from "app/providers/ErrorBoundary";
+import { StoreProvider } from "app/providers/StoreProvider";
 
-const container = document.getElementById("root");
-ReactDOM.createRoot(container!).render(
-	<React.StrictMode>
+// const container = document.getElementById("root");
+ReactDOM.createRoot(document.getElementById("root")!).render(
+	<StoreProvider>
 		<BrowserRouter>
 			<ErrorBoundary>
 				<ThemeProvider>
@@ -18,5 +18,8 @@ ReactDOM.createRoot(container!).render(
 				</ThemeProvider>
 			</ErrorBoundary>
 		</BrowserRouter>
-	</React.StrictMode>
+	</StoreProvider>
 );
+{
+	/* <React.StrictMode></React.StrictMode> */
+}
