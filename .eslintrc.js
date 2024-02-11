@@ -13,7 +13,7 @@ module.exports = {
 			env: {
 				node: true,
 			},
-			files: [".eslintrc.{js,cjs}", "./scripts/*.js"],
+			files: [".eslintrc.{js,cjs}", "./scripts/*.js", "./json-server/*.js"],
 			parserOptions: {
 				sourceType: "script",
 			},
@@ -31,7 +31,6 @@ module.exports = {
 		quotes: [2, "double"],
 		semi: [2, "always"],
 		"react/jsx-indent": [2, "tab"],
-		// "linebreak-style": ["error", "windows"],
 		"react/jsx-filename-extension": [
 			2,
 			{ extensions: [".js", ".jsx", ".tsx"] },
