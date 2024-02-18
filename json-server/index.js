@@ -3,7 +3,7 @@ const fs = require("fs");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const jsonServer = require("json-server");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
 

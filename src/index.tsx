@@ -8,7 +8,6 @@ import { BrowserRouter } from "react-router-dom";
 import { ErrorBoundary } from "app/providers/ErrorBoundary";
 import { StoreProvider } from "app/providers/StoreProvider";
 
-// const container = document.getElementById("root");
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<StoreProvider>
 		<BrowserRouter>
