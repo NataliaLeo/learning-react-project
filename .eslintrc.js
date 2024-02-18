@@ -13,8 +13,10 @@ module.exports = {
 			env: {
 				node: true,
 			},
-			files: [".eslintrc.{js,cjs}", "./scripts/*.js", "./json-server/*.js"],
+			extends: ["plugin:@typescript-eslint/disable-type-checked"],
+			files: [".eslintrc.{js,cjs}", "./scripts/*.js", "./json-server/index.js"],
 			parserOptions: {
+				project: null,
 				sourceType: "script",
 			},
 		},
@@ -26,6 +28,7 @@ module.exports = {
 		project: true,
 	},
 	plugins: ["@typescript-eslint", "react", "i18next", "react-hooks"],
+	ignorePatterns: [],
 	rules: {
 		indent: [2, "tab"],
 		quotes: [2, "double"],
