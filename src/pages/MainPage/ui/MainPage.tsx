@@ -1,5 +1,5 @@
 import { BugButton } from "app/providers/ErrorBoundary";
-import { Counter } from "entities/Counter";
+import { Counter } from "../../../entities/Counter"; //??не работает относительный импорт
 import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
