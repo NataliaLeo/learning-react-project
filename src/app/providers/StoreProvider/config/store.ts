@@ -3,18 +3,28 @@ import { ReducersMapObject } from "redux";
 import { counterReducer } from "../../../../entities/Counter/model/slice/counterSlice";
 import { StateSchema } from "./StateSchema";
 import { userReducer } from "../../../../entities/User/index";
-import { loginReducer } from "features/AuthByUsername";
+import { createReducerManager } from "./ReducerManager";
 
-export function createReduxStore(initialState?: StateSchema) {
+export function createReduxStore(
+	initialState?: StateSchema,
+	asyncReducers?: ReducersMapObject<StateSchema>
+) {
 	const rootReducers: ReducersMapObject<StateSchema> = {
+		...asyncReducers,
 		counter: counterReducer,
 		user: userReducer,
-		loginForm: loginReducer,
 	};
 
-	return configureStore<StateSchema>({
-		reducer: rootReducers,
+	const reducerManager = createReducerManager(rootReducers);
+
+	const store = configureStore<Partial<StateSchema>>({
+		reducer: reducerManager.reduce,
 		devTools: __IS_DEV__,
 		preloadedState: initialState,
 	});
+
+	// @ts-expect-error vremenno
+	store.reducerManager = reducerManager;
+
+	return store;
 }

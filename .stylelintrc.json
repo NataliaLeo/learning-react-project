@@ -6,7 +6,8 @@
 		"property-no-vendor-prefix": [
 			true,
 			{
-				"severity": "warning"
+				"severity": "warning",
+				"ignoreSelectors": ["/@-webkit-.*/", "/-webkit-.*/"]
 			}
 		],
 		"at-rule-no-vendor-prefix": [

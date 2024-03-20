@@ -30,4 +30,6 @@ Light.decorators = [StoreDecorator({})];
 export const AuthNavbar: Story = {
 	args: {},
 };
-AuthNavbar.decorators = [StoreDecorator({ user: { authData: {} } })];
+AuthNavbar.decorators = [
+	StoreDecorator({ user: { authData: { id: "", username: "" } } }),
+];
