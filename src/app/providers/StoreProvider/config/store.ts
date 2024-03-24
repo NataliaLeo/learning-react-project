@@ -4,6 +4,7 @@ import { counterReducer } from "../../../../entities/Counter/model/slice/counter
 import { StateSchema } from "./StateSchema";
 import { userReducer } from "../../../../entities/User/index";
 import { createReducerManager } from "./ReducerManager";
+import { DeepPartial } from "app/types/types";
 
 export function createReduxStore(
 	initialState?: StateSchema,
@@ -17,7 +18,7 @@ export function createReduxStore(
 
 	const reducerManager = createReducerManager(rootReducers);
 
-	const store = configureStore<Partial<StateSchema>>({
+	const store = configureStore<DeepPartial<StateSchema>>({
 		reducer: reducerManager.reduce,
 		devTools: __IS_DEV__,
 		preloadedState: initialState,
