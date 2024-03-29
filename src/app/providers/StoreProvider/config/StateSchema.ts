@@ -6,6 +6,7 @@ import {
 } from "@reduxjs/toolkit";
 import { DeepPartial } from "app/types/types";
 import { CounterSchema } from "entities/Counter";
+import { ProfileSchema } from "entities/Profile";
 import { UserSchema } from "entities/User";
 import { LoginSchema } from "features/AuthByUsername";
 
@@ -14,6 +15,7 @@ export interface StateSchema {
 	user: UserSchema;
 	//асинхронные редюсеры
 	loginForm?: LoginSchema;
+	profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

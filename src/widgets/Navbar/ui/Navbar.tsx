@@ -2,7 +2,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Navbar.module.scss";
 // import { Modal } from "shared/ui/Modal/Modal";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { t } from "i18next";
 import { LoginModal } from "features/AuthByUsername";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,7 @@ interface NavbarProps {
 	className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
 	const [isAuthModal, setIsAuthModal] = useState(false);
 
 	const authData = useSelector(getUserAuthData);
@@ -60,4 +60,4 @@ export const Navbar = ({ className }: NavbarProps) => {
 			)}
 		</div>
 	);
-};
+});

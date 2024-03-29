@@ -1,19 +1,17 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./Sidebar.module.scss";
-import { useState } from "react";
+import { memo, useState } from "react";
 import { ThemeSwitch } from "widgets/ThemeSwitch";
 import { LangSwitch } from "widgets/LangSwitch";
 import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import MainIcon from "shared/assets/icons/main-20-20.svg";
-import AboutIcon from "shared/assets/icons/about-20-20.svg";
+import { SidebarItemType, SidebarItemsList } from "widgets/Sidebar/model/items";
+import { SidebarItem } from "../SidebarItem/SidebarItem";
 
 interface SidebarProps {
 	className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
 	const [collapsed, setCollapsed] = useState(false);
 	const onToggle = () => {
 		setCollapsed((prev) => !prev);
@@ -36,26 +34,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
 				{collapsed ? ">" : "<"}
 			</Button>
 			<div className={cls.items}>
-				<div>
-					<AppLink
-						to={RoutePath.main}
-						theme={AppLinkTheme.PRIMARY}
-						className={cls.item}
-					>
-						<MainIcon className={cls.icon} />
-						<span className={cls.link}>Главная</span>
-					</AppLink>
-				</div>
-				<div>
-					<AppLink
-						to={RoutePath.about}
-						theme={AppLinkTheme.PRIMARY}
-						className={cls.item}
-					>
-						<AboutIcon className={cls.icon} />
-						<span className={cls.link}>О сайте</span>
-					</AppLink>
-				</div>
+				{SidebarItemsList.map((item: SidebarItemType) => (
+					<div key={item.path}>
+						<SidebarItem item={item} collapsed={collapsed} />
+					</div>
+				))}
 			</div>
 			<div className={cls.switchers}>
 				<ThemeSwitch />
@@ -63,4 +46,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
 			</div>
 		</div>
 	);
-};
+});

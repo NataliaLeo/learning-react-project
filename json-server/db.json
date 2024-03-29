@@ -46,6 +46,13 @@
 		}
 	],
 	"profile": {
-		"name": "typicode"
+		"firstname": "Кекс",
+		"lastname": "Барсикович",
+		"age": 22,
+		"currency": "RUB",
+		"country": "Russia",
+		"city": "Moskow",
+		"username": "admin",
+		"avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.purina.ru%2Fcats%2Fcats-that-treat-diseases&psig=AOvVaw0Cy2Pr0PhvmJlIH9My7XXM&ust=1711470692369000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIj3mKbrj4UDFQAAAAAdAAAAABAJ"
 	}
 }

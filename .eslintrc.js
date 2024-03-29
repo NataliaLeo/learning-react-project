@@ -47,6 +47,7 @@ module.exports = {
 		"import/no-extraneous-dependencies": "off",
 		"@typescript-eslint/no-explicit-any": "warn",
 		"linebreak-style": 0,
+		"react/display-name": 0,
 		"react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
 		"react-hooks/exhaustive-deps": "error", // Checks effect dependencies
 	},

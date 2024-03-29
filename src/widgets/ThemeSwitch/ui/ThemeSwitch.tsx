@@ -4,12 +4,13 @@ import { Theme, useTheme } from "app/providers/ThemeProvider";
 import LightIcon from "shared/assets/icons/theme-normal.svg";
 import DarkIcon from "shared/assets/icons/theme-dark.svg";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { memo } from "react";
 
 interface ThemeSwitchProps {
 	className?: string;
 }
 
-export const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
+export const ThemeSwitch = memo(({ className }: ThemeSwitchProps) => {
 	const { theme, toggleTheme } = useTheme();
 	return (
 		<Button
@@ -20,4 +21,4 @@ export const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
 			{theme === Theme.DARK ? <LightIcon /> : <DarkIcon />}
 		</Button>
 	);
-};
+});
