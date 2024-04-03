@@ -8,6 +8,10 @@ module.exports = {
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
 	],
+	globals: {
+		__IS_DEV__: true,
+		__API__: true,
+	},
 	overrides: [
 		{
 			env: {

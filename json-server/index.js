@@ -8,8 +8,10 @@ const path = require("path");
 const server = jsonServer.create();
 
 const router = jsonServer.router(path.resolve(__dirname, "db.json"), {
-	noCors: true,
+	noCors: false,
 });
+
+server.use(jsonServer.defaults());
 
 // Нужно для задержки, имитации реального апи
 server.use(async (req, res, next) => {
@@ -26,8 +28,6 @@ server.use((req, res, next) => {
 	}
 	next();
 });
-
-server.use(jsonServer.defaults());
 
 server.use(jsonServer.bodyParser);
 
