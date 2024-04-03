@@ -19,6 +19,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 		</StoreProvider>
 	</BrowserRouter>
 );
-{
-	/* <React.StrictMode></React.StrictMode> */
-}
