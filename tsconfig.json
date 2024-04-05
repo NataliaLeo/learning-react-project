@@ -13,7 +13,8 @@
 		},
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
-		"noEmit": false
+		"noEmit": false,
+		"strict": true
 	},
 	"ts-node": {
 		"compilerOptions": {

@@ -9,12 +9,6 @@ interface LoginByUsernameProps {
 	password: string;
 }
 
-// const axiosConfig = {
-// 	headers: {
-// 		"Content-Type": "application/json;charset=UTF-8",
-// 	},
-// };
-
 export const loginByUsername = createAsyncThunk<
 	User,
 	LoginByUsernameProps,
@@ -38,7 +32,7 @@ export const loginByUsername = createAsyncThunk<
 			);
 			dispatch(userActions.setAuthData(response.data));
 
-			extra.navigate("/about");
+			extra.navigate?.("/about");
 
 			return response.data;
 		} catch (e) {

@@ -1,6 +1,6 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { Mods, classNames } from "shared/lib/classNames/classNames";
 import cls from "./Button.module.scss";
-import { ButtonHTMLAttributes, FC, ReactNode, memo } from "react";
+import { ButtonHTMLAttributes, ReactNode, memo } from "react";
 import React from "react"; //нужно для работы storybook
 
 export enum ButtonTheme {
@@ -30,14 +30,14 @@ export const Button = memo((props: ButtonProps) => {
 	const {
 		className,
 		children,
-		theme,
+		theme = ButtonTheme.OUTLINE,
 		square,
 		disabled,
 		size = ButtonSize.M,
 		...otherProps
 	} = props;
 
-	const mods: Record<string, boolean> = {
+	const mods: Mods = {
 		[cls[theme]]: true,
 		[cls.square]: square,
 		[cls[size]]: true,

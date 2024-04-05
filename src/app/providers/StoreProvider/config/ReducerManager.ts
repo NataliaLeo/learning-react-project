@@ -26,7 +26,7 @@ export function createReducerManager(
 				});
 				keysToRemove = [];
 			}
-
+			//@ts-expect-error позже разобраться
 			return combinedReducer(state, action);
 		},
 
