@@ -16,5 +16,9 @@ npm install
 ```
 3. 
 ```
+npm run start:dev:server
+```
+4.
+```
 npm start
 ```
